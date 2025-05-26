@@ -1,0 +1,84 @@
+POST http://localhost:5109/api/prescriptions
+Content-Type: application/json
+
+{
+  "date": "2025-04-01T08:00:00",
+  "dueDate": "2025-04-10T08:00:00",
+  "doctorId": 1,
+  "patient": {
+    "firstName": "Marek",
+    "lastName": "Kowalski",
+    "birthdate": "1982-03-15"
+  },
+  "medicaments": [
+    { "medicamentId": 1, "dose": 2, "description": "1 tabletka rano i wieczorem" },
+    { "medicamentId": 2, "dose": 1, "description": "Po śniadaniu" }
+  ]
+}
+
+
+GET http://localhost:5109/api/prescriptions/patients/1
+Accept: application/json
+
+POST http://localhost:5109/api/prescriptions
+Content-Type: application/json
+
+{
+  "date": "2025-05-10T09:30:00",
+  "dueDate": "2025-06-10T09:30:00",
+  "doctorId": 1,
+  "patient": {
+    "firstName": "Zofia",
+    "lastName": "Wiśniewska",
+    "birthdate": "1978-07-22"
+  },
+  "medicaments": [
+    { "medicamentId": 1, "dose": 1, "description": "Po posiłku" },
+    { "medicamentId": 2, "dose": 1, "description": "Rano" },
+    { "medicamentId": 3, "dose": 1, "description": "Wieczorem" },
+    { "medicamentId": 4, "dose": 1, "description": "Rano" },
+    { "medicamentId": 5, "dose": 1, "description": "Po jedzeniu" },
+    { "medicamentId": 6, "dose": 1, "description": "Co 8h" },
+    { "medicamentId": 7, "dose": 1, "description": "Co 12h" },
+    { "medicamentId": 8, "dose": 1, "description": "Na czczo" },
+    { "medicamentId": 9, "dose": 1, "description": "Wieczorem" },
+    { "medicamentId": 10, "dose": 1, "description": "Rano i wieczorem" },
+    { "medicamentId": 11, "dose": 1, "description": "Nocą" }
+  ]
+}
+
+
+POST http://localhost:5109/api/prescriptions
+Content-Type: application/json
+
+{
+  "date": "2025-06-01T11:00:00",
+  "dueDate": "2025-06-10T11:00:00",
+  "doctorId": 999,
+  "patient": {
+    "firstName": "Jan",
+    "lastName": "Nowak",
+    "birthdate": "1995-12-01"
+  },
+  "medicaments": [
+    { "medicamentId": 1, "dose": 1, "description": "Przed snem" }
+  ]
+}
+
+
+POST http://localhost:5109/api/prescriptions
+Content-Type: application/json
+
+{
+  "date": "2025-07-01T10:15:00",
+  "dueDate": "2025-07-15T10:15:00",
+  "doctorId": 1,
+  "patient": {
+    "firstName": "Ewa",
+    "lastName": "Zielińska",
+    "birthdate": "1989-11-30"
+  },
+  "medicaments": [
+    { "medicamentId": 999, "dose": 1, "description": "Po obiedzie" }
+  ]
+}
